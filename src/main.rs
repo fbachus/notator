@@ -27,7 +27,12 @@ fn teapot() -> RawTeapotJson {
 #[get("/template")]
 fn example() -> Template {
     let users = vec!["mark", "ruffalo"];
-    Template::render("test_template", context! { users: users } )
+    Template::render("test_template_base", context! { users: users } )
+}
+#[get("/template_override")]
+    fn template_2() -> Template {
+    let users = vec!["mark", "ruffalo"];
+    Template::render("first_extend_template", context! { users: users } )
 }
 
 #[launch]
@@ -36,5 +41,6 @@ fn rocket() -> _ {
         .mount("/", routes![index])
         .mount("/", routes![teapot])
         .mount("/", routes![example])
+        .mount("/", routes![template_2])
         .attach(Template::fairing())
 }

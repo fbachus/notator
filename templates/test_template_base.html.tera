@@ -8,13 +8,17 @@
     </head>
     <body>
         <div id="content">{% block content %}
-        <h1>Free Rocket Try #1</h1>
+            {% block Title %}
+            <h1>Free Rocket Try #1</h1>
+            {% endblock Title %}</div>
         <p>Insert coin to start!</p>
+        {% block user_loop %}
         <ul>
-        {% for user in users %}
+            {% for user in users %}
             <li style="color:red">{{user}}</li>
-        {% endfor %}
+            {% endfor %}
         </ul>
+        {% endblock user_loop %}</div>
         {% endblock content %}</div>
     </body>
 </html>
