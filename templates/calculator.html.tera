@@ -2,6 +2,11 @@
 {% block content %}
     <h2>Multiply</h2>
     <p>Use the inputs to multiply two numbers</p>
+    <form class="calculator" action="/add" method="POST">
+        <input type="number" name="num1" width=2rem height=2rem / ><br>
+        <input type="number" name="num2" width=2rem height=2rem / ><br>
+        <button>Submit</button>
+    </form>
     <form class="calculator" action="/multiply" method="GET">
         <input type="number" name="num1" width=2rem height=2rem / ><br>
         <input type="number" name="num2" width=2rem height=2rem / ><br>
