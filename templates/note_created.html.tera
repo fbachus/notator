@@ -1,0 +1,4 @@
+{% extends "test_template_base" %}
+{% block content %}
+    <p>Your text: <br><strong>{{ text }}</strong></p>
+{% endblock content %}

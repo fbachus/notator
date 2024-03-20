@@ -1,0 +1,4 @@
+{% extends "test_template_base" %}
+{% block content %}
+    <p>The result of {{num1}} {{operator}} {{num2}} = {{result}}</p>
+{% endblock content %}

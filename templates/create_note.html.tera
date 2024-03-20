@@ -1,0 +1,9 @@
+{% extends "test_template_base" %}
+{% block content %}
+    {% block notesfield %}
+    <form id="note-creator" action="/note" method="POST">
+        <input type="text" name="content" width=10rem height=4rem / >
+        <button>Submit</button>
+    </form>
+    {% endblock notesfield %}
+{% endblock content %}
